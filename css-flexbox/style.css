@@ -1,0 +1,32 @@
+.main {
+    display: flex;
+    /*flex-direction: row;*/
+    /*justify-content:space-around;*/
+    align-items: flex-end;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 500px;
+    background-color: rgb(206, 206, 206)
+}
+.box {
+    padding: 35px;
+    margin: 10px;
+    background-color: orangered;
+    color: white;
+    font-size: 30px;
+}
+.b2 {
+    /*height: 100px;*/
+    /*align-self: flex-start;*/
+    order: -1;
+    /*flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 20%;*/
+    flex: 0 0 30%;
+}
+.b4 {
+    /*font-size: 50px;*/
+    /*align-self: flex-end;*/
+    order: 1;
+    flex-grow: 1;
+}
