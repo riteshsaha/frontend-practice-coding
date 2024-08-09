@@ -173,7 +173,7 @@ function x1() {
 }
 
 var z1 = x1();
-z1();   // 10; Even though a() is already called and it should be garbage collected but because of closure concept, until z1() is executed, it stores the content of x1() i.e. references of a and y1() inside its memory which isn't garbage collected.
+z1();   // 10; Even though a is already called and it should be garbage collected but because of closure concept, until z1() is executed, it stores the content of x1() i.e. references of a and y1() inside its memory which isn't garbage collected.
 
 console.log(" -------------------------------------------------------- ");
 
@@ -193,5 +193,24 @@ console.log(" -------------------------------------------------------- ");
 
 console.log(minBy([2, 3, 1, 4], (num) => num));         // 1
 console.log(minBy([{ n: 1 }, { n: 2 }], (o) => o.n));   // { n: 1 }
+
+console.log(" -------------------------------------------------------- ");
+
+
+function cycle(...values) {
+  let count = 0;
+    return function () {
+       if (count >= values.length) count = 0;
+       return values[count++];
+  }
+}
+
+const helloFn = cycle('hello');
+console.log(helloFn()); // "hello"
+const onOffFn = cycle('on', 'off', 'fuse');
+console.log(onOffFn()); // "on"
+console.log(onOffFn()); // "off"
+console.log(onOffFn()); // "fuse"
+console.log(onOffFn()); // "on"
 
 console.log(" -------------------------------------------------------- ");

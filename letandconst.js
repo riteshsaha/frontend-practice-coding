@@ -1,7 +1,7 @@
 /*
 console.log(a);   // ReferenceError: Cannot access 'a' before initialization; 
                     // let variables are in separate memory object outside GEC called Script, where it can be accessed after assigning a value.
-                    // This ststement is executed in Temporal Dead Zone of a.
+                    // This statement is executed in Temporal Dead Zone of a.
 console.log(b);     // undefined; var variables are stored inside GEC.
 let a = 10;
 console.log(a);     // 10

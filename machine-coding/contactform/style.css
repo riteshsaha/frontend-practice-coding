@@ -1,0 +1,35 @@
+:root {
+    margin-left: 10px;
+}
+
+form label,
+form input[type="text"],
+form textarea {
+    display: block;
+    width: 30%;
+    padding: 2px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+form textarea {
+    height: 100px;
+    /* Adjust height as needed */
+    resize: vertical;
+    /* Allow vertical resizing of textarea */
+}
+
+#btn-click {
+        background-color: #0465aa;
+        border: none;
+        color: white;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+}
+
+#btn-click:active {
+    background-color: #bae2ff;
+}

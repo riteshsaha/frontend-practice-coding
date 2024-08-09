@@ -34,7 +34,7 @@ printStr("A", () => {
 
 // Callback Hell
 
-var cart = ["shoes", "jersey", "pants"];
+/*var cart = ["shoes", "jersey", "pants"];
 
 api.createOrder(cart, function () {
     api.proceedToPayment(function () {
@@ -42,7 +42,7 @@ api.createOrder(cart, function () {
             api.updateOrderStatus();
         });
     });
-});
+});*/
 
 // 💡 So over here, we are creating a order and then we are blindly trusting `createOrder` to call `proceedToPayment`.
 

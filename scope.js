@@ -37,5 +37,5 @@ a();*/
     }
 }
 a();
-console.log(b);     // ReferenceError: b is not defined; since global execution context does not what b is as its inside function scope.
+console.log(b);     // ReferenceError: b is not defined; since global execution context does not know what b is as its inside function scope.
 */

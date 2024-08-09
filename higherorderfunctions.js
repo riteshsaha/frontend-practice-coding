@@ -21,6 +21,7 @@ function calcArea(radius) {
 }
 
 console.log(calcArea(radius));
+//console.log(radius.map(x => Math.PI * x * x));
 
 function calcCircumference(radius) {
     let output = [];
@@ -52,6 +53,8 @@ function calculate(radiusArr, operation) {
 
 console.log(calculate(radius, area));
 console.log(calculate(radius, circumference));
+//console.log("Testing .map()");
+//console.log(radius.map(x => area(x)));
 
 
 // Using polyfills

@@ -100,3 +100,89 @@ var b7 = function () {
 
 b7()();     // Hello
 
+console.log("--------------------------------------------- ");
+
+function flatten(value) {
+  let i = 0;
+  while (i < value.length) {
+    if (Array.isArray(value[i])) {
+      value.splice(i, 1, ...value[i]);
+    } else {
+      i++;
+    }
+  }
+  return value;
+}
+
+const flattenedArray = flatten([1, [2, [3]]]);
+console.log(flattenedArray); // Output: [1, 2, 3]
+
+console.log("--------------------------------------------- ");
+
+/**
+ * @param {Array} iterable
+ * @return {Promise<Array>}
+ */
+function promiseAll(iterable) {
+    return new Promise((resolve, reject) => {
+        let unresolved = iterable.length;
+        let results = new Array(iterable.length);
+
+        if (unresolved === 0) {
+            resolve(results);
+            return;
+        }
+
+        iterable.forEach(async (item, index) => {
+            try {
+                const val = await item;
+                results[index] = val;
+                unresolved -= 1;
+
+                if (unresolved === 0) {
+                    resolve(results);
+                }
+            } catch (err) {
+                reject(err);
+            }
+        })
+    });
+}
+
+const p0 = Promise.resolve(3);
+const p1 = 42;
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve('foo');
+  }, 100);
+});
+
+promiseAll([p0, p1, p2]).then(() => {
+    console.log("Promises executed.");
+});
+
+console.log("--------------------------------------------- ");
+
+ function deepClone(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+const obj1 = { user: { role: 'admin' } };
+const clonedObj1 = deepClone(obj1);
+
+console.log(clonedObj1);
+
+//clonedObj1.user.role = 'guest'; // Change the cloned user's role to 'guest'.
+//clonedObj1.user.role; // 'guest'
+//obj1.user.role; // Should still be 'admin'.
+
+const obj2 = { foo: [{ bar: 'baz' }] };
+const clonedObj2 = deepClone(obj2);
+
+//obj2.foo[0].bar = 'bax'; // Modify the original object.
+//obj2.foo[0].bar; // 'bax'
+//clonedObj2.foo[0].bar; // Should still be 'baz'.
+
+console.log(clonedObj2);
+
+console.log("--------------------------------------------- ");

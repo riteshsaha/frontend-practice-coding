@@ -1,0 +1,25 @@
+:root {
+    margin-left: 10px;
+}
+
+form label,
+form input[type="number"] {
+    width: 20%;
+    padding: 2px;
+    margin-bottom: 10px;
+}
+
+.btn-calculate {
+        background-color: #0465aa;
+        border: none;
+        color: white;
+        padding: 5px;
+        margin-top: 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+}
+
+.btn-calculate:active {
+    background-color: #bae2ff;
+}

@@ -15,23 +15,27 @@ console.log(a);     // 10
 var a = 100;
 {
     var a = 10;
-    console.log(a);     // 100
+    console.log(a);     // 10
 }
-console.log(a);     // 100, , instead of the 100 we were expecting. So block "a" modified val of global "a" as well. In console, only b and c are in block space. a initially is in global space(a = 100), and when a = 10 line is run, a is not created in block space, but replaces 100 with 10 in global space itself.
+console.log(a);     // 10, , instead of the 100 we were expecting. So block "a" modified val of global "a" as well. In console, only b and c are in block space. a initially is in global space(a = 100), and when a = 10 line is run, a is not created in block space, but replaces 100 with 10 in global space itself.
 
+var a = 25;
 let b = 100;
 const c = 50;
 {
+    var a = 2.5;
     let b = 10;
     const c = 5;
+    console.log(a);     // 2.5
     console.log(b);     // 10
     console.log(c);     // 5
 }
+console.log(a);     // 2.5, var is GLOBAL SCOPED.
 console.log(b);     // 100, let is BLOCK SCOPED.
 console.log(c);     //  50, const is also BLOCK SCOPED.
 // Both b's are in separate spaces (one in Block(10) and one in Script(another arbitrary mem space)(100)). Same is also true for *const* declarations.
 
-// Same logic applies for functions.
+// Same logic does not apply for functions in case of var. In functions, the value of var is not replaced in global scope by the change made in local scope.
 var x = 1000;
 let y = 2000;
 const z = 3000;

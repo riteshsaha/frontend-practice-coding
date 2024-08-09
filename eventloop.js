@@ -1,7 +1,7 @@
 console.log("Start");
 setTimeout(function () {
     console.log("Timeout");     // Function reference is stored inside the callback queue. Once timer expires, it is pushed by Event loop into Call Stack for execution.
-}, 2000);
+}, 500);
 fetch("https://jsonplaceholder.typicode.com/users/1").then(response => {
     console.log("Fetch CallBack");              // Once ready, it goes to Microtask Queue which has higher priority than Callback/Task Queue.
 });
