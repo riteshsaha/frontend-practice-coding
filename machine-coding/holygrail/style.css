@@ -5,7 +5,7 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     height: q;
     min-height: 10vh;
 }
@@ -27,18 +27,21 @@ aside,
 footer {
     padding: 12px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header {
     background-color: tomato;
-    height: 60px;
+    height: 15vh;
 }
 
 nav {
     background-color: coral;
     flex-shrink: 0;
-    width: 100px;
-    min-height: 100px;
+    width: 25%;
+    min-height: 60vh;
 }
 
 main {
@@ -50,11 +53,11 @@ main {
 aside {
     background-color: sandybrown;
     flex-shrink: 0;
-    width: 100px;
-    min-height: 100px;
+    width: 25%;
+    min-height: 60vh;
 }
 
 footer {
     background-color: slategray;
-    height: 60px;
+    height: 15vh;
 }

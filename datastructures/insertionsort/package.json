@@ -1,0 +1,15 @@
+{
+  "name": "insertionsort",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/insertionsort.js",
+  "scripts": {
+    "start": "node src/insertionsort.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

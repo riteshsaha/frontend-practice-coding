@@ -7,7 +7,7 @@ function debounce(func, timeout = 300) {
     timer = setTimeout(() => { func.apply(this, args); }, timeout);
   };
 }
-  
+
 function saveInput(){
   console.log('Saving data.....', count++);
 }

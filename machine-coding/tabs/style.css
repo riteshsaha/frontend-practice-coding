@@ -1,0 +1,26 @@
+body {
+    font-family: sans-serif;
+}
+
+.tab-btn {
+    width: 80px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    transition-duration: 0.4s;
+}
+
+.tab-btn.active {
+    background-color: blueviolet;
+    color: white;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
