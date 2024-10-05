@@ -1,0 +1,26 @@
+{
+  "name": "fooddeliveryapp",
+  "version": "1.0.0",
+  "description": "Food Delivery App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "keywords": [
+    "react",
+    "namaste-react"
+  ],
+  "author": "Ritesh Saha",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.11.1",
+    "parcel": "^2.12.0",
+    "prettier": "^3.3.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

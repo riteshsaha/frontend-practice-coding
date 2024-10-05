@@ -1,13 +1,14 @@
 {
   "name": "helloworld",
   "version": "1.0.0",
-  "description": "",
-  "main": "App.js",
+  "description": "First React App",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest",
     "lint": "eslint"
   },
-  "keywords": [],
+  "keywords": ["react", "practice", "namaste-react"],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -16,6 +17,14 @@
     "eslint-plugin-react": "^7.37.0",
     "globals": "^15.9.0",
     "parcel": "^2.12.0",
-    "prettier": "3.3.3"
-  }
+    "prettier": "3.3.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "browsersList" : [
+    "last 2 versions"
+  ]
 }
